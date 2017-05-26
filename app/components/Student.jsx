@@ -1,15 +1,34 @@
 import React, { Component } from 'react';
+import Form from './Form';
+import StudentsInRows from './StudentsInRows'
 
-const Student = (props) => {
+
+export default class Student extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    componentDidMount() {
+        this.props.getDeezStudents()
+    }
+
+render() {
+    console.log('props.students:', this.props.students.allStudents)
     return (
-            <tr>
-        <th>{props.name}</th>
-        <th>{props.email}</th>
-        <th>{props.campus}</th>
-        <th><button type="button" className="btn btn-danger btn-xs">X</button></th>
-        </tr>
-     
+        <div>
+        {/*<Form />*/}
+             <table className="table table-striped">
+                 <tbody>
+           {this.props.students.allStudents && this.props.students.allStudents.map(student => {
+             return (  <StudentsInRows name={student.name}
+                            email={student.email}
+                             campus={student.campus.name}/>)
+           })}
+           </tbody>
+           </table>
+        </div>
     )
 }
 
-export default Student;
+}
+

@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 
 import Navbar from './Navbar';
-import Campuses from './Campuses';
+import CampusesContainer from '../containers/CampusesContainer';
 
 export default function Root() {
-
     return (
          <div>
                 <Navbar />
          <div id="main" className="container-fluid">
-            <Campuses />
+            <CampusesContainer />
           </div>
       </div>
     )

@@ -1,19 +1,18 @@
 import axios from 'axios';
-import React from 'react';
+
 
 const initialState = {
-    all : {},
+    all : [],
     selected: ''
 }
 
 const GET_CAMPUSES = 'GET_CAMPUSES';
 
 export const getAll = (campuses) => {
-    console.log('got getALl')
-  return {
+    return {
     type: GET_CAMPUSES,
   campuses
-}
+    }
 }
 
 export const getAllCampuses = () =>  {
@@ -27,11 +26,10 @@ export const getAllCampuses = () =>  {
     }
 }
 
-export default function reducer(state = initialState, action)  {
+export default function (state = initialState, action)  {
   const newState = Object.assign({}, state);
-  console.log(action.type);
   switch (action.type) {
-    case 'GET_CAMPUSES' :
+    case GET_CAMPUSES :
         newState.all = action.campuses;
         break;
     default: 

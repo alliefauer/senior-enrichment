@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default() => {
+const Form = () => {
    
    return (
         <div className="row">
@@ -39,3 +39,5 @@ export default() => {
     )
 
 }
+
+export default Form;
