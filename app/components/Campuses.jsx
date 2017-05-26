@@ -18,7 +18,7 @@ componentDidMount() {
 
 
   render() {
-
+    
     return (
         <div className="container-fluid campuses">
             <div className="row">

@@ -8,7 +8,7 @@ import StudentsContainer from '../containers/StudentsContainer';
 
 
 export default function Students() {
-
+    
     return (
       <div> 
             <Navbar />

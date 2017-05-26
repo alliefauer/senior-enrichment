@@ -1,13 +1,19 @@
 import axios from 'axios';
 
 
+
+//initial state
 const initialState = {
     all : [],
     selected: ''
 }
 
+
+//action
 const GET_CAMPUSES = 'GET_CAMPUSES';
 
+
+//action-creater
 export const getAll = (campuses) => {
     return {
     type: GET_CAMPUSES,
@@ -15,6 +21,7 @@ export const getAll = (campuses) => {
     }
 }
 
+//dispatcher
 export const getAllCampuses = () =>  {
     return dispatch => {
     axios.get('/api/campuses/')
@@ -26,6 +33,8 @@ export const getAllCampuses = () =>  {
     }
 }
 
+
+//reducer
 export default function (state = initialState, action)  {
   const newState = Object.assign({}, state);
   switch (action.type) {

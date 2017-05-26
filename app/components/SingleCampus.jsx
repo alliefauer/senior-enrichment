@@ -1,4 +1,32 @@
 import React, { Component } from 'react';
+
+// import Student from './Student';
+
+import Navbar from './Navbar';
+import SomeStudentsContainer from '../containers/StudentsContainer';
+
+
+
+export default function Students() {
+
+    return (
+      <div> 
+            <Navbar />
+        <div id="main" className="container-fluid">
+            <SomeStudentsContainer />
+          </div>
+      </div>
+    )
+
+}
+
+
+
+
+
+
+
+/*import React, { Component } from 'react';
 import axios from 'axios';
 
 import Navbar from './Navbar'
@@ -43,4 +71,4 @@ export default class SingleCampus extends Component {
       </div>
     )
 }
-}
+}*/

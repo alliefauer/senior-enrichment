@@ -9,12 +9,12 @@ export default class Student extends Component {
     }
 
     componentDidMount() {
-        this.props.getDeezStudents()
-        //console.log(this.props.params)
+        this.props.getSomeofDeezStudents()
+
     }
 
-
 render() {
+    console.log('props.students:', this.props)
     return (
         <div>
         {/*<Form />*/}
@@ -32,4 +32,3 @@ render() {
 }
 
 }
-
